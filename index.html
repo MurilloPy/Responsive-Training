@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="PT-BR">
+
+    <head>
+
+        <title> Responsive Training </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA=Compatible" content="IE-edge">
+        <meta name="description" content="#">
+        <meta name="keywords" content="#">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="#">
+
+    </head>
+
+    <body>
+
+        <main>
+
+            <header>
+
+                <div class="div-main-header">
+
+                    <div class="div-title-header">
+
+                        <h1> LOGO </h1>
+
+                    </div>
+
+                    <div class="hamburger">
+
+                        <div class="camada"></div>
+                        <div class="camada"></div>
+                        <div class="camada"></div>
+    
+                    </div>
+    
+                    <nav class="menu">
+
+                        <ul>
+
+                            <li>
+
+                                <a href="#"> Home </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="#"> Home </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#"> Home </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#"> Home </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#"> Home </a>
+
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <script>
+
+                    const hamburger = document.querySelector(".hamburger");
+                    const menu = document.querySelector(".menu");
+
+                    hamburger.addEventListener("click", () => {
+
+                        hamburger.classList.toggle("open");
+                        menu.classList.toggle("show-menu");
+
+                    });
+
+                    document.addEventListener("click", (event) =>{
+
+                        const targetElement = event.target;
+
+                        if (!hamburger.contains(targetElement) && !menu.contains(targetElement)){
+
+                            hamburger.classList.remove("open");
+                            menu.classList.remove("show-menu");
+
+                        };
+
+                    });
+
+                </script>
+
+            </header>
+            
+        </main>
+
+    </body>
+
+</html>
